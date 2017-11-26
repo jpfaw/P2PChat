@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="P2PChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifc-vs-eXA">
+                                <rect key="frame" x="149" y="318" width="77" height="30"/>
+                                <state key="normal" title="端末を探す"/>
+                                <connections>
+                                    <action selector="pushBrowseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="itg-w0-xWn"/>
+                                </connections>
+                            </button>
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wv1-YX-fzw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9T0-Wg-nhU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-6O-6Zm">
+                                        <rect key="frame" x="0.0" y="605" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="g1R-7R-Jw3"/>
+                                        </constraints>
+                                    </view>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjc-hb-9Mt">
+                                        <rect key="frame" x="5" y="611" width="309" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4aK-Qa-1Cy"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJl-pq-nBf">
+                                        <rect key="frame" x="324" y="611" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="bhz-Fd-D9B"/>
+                                            <constraint firstAttribute="height" constant="30" id="gGC-2D-8cq"/>
+                                        </constraints>
+                                        <state key="normal" title="送信"/>
+                                        <connections>
+                                            <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BAb-xU-c6Y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9T0-Wg-nhU" firstAttribute="leading" secondItem="Wv1-YX-fzw" secondAttribute="leading" id="0Ab-rh-Jym"/>
+                                    <constraint firstItem="9T0-Wg-nhU" firstAttribute="top" secondItem="Wv1-YX-fzw" secondAttribute="top" id="0Re-ts-jzp"/>
+                                    <constraint firstItem="gJl-pq-nBf" firstAttribute="leading" secondItem="tjc-hb-9Mt" secondAttribute="trailing" constant="10" id="GbX-VN-cGm"/>
+                                    <constraint firstItem="tjc-hb-9Mt" firstAttribute="top" secondItem="xLg-6O-6Zm" secondAttribute="bottom" constant="5" id="Ofd-gn-q5B"/>
+                                    <constraint firstItem="gJl-pq-nBf" firstAttribute="top" secondItem="xLg-6O-6Zm" secondAttribute="bottom" constant="5" id="Tga-Ob-bP8"/>
+                                    <constraint firstAttribute="trailing" secondItem="xLg-6O-6Zm" secondAttribute="trailing" id="Y2c-pv-8K4"/>
+                                    <constraint firstItem="gJl-pq-nBf" firstAttribute="leading" secondItem="tjc-hb-9Mt" secondAttribute="trailing" constant="10" id="aOt-6L-KlZ"/>
+                                    <constraint firstItem="tjc-hb-9Mt" firstAttribute="leading" secondItem="Wv1-YX-fzw" secondAttribute="leading" constant="5" id="bdC-Ug-Is5"/>
+                                    <constraint firstAttribute="trailing" secondItem="9T0-Wg-nhU" secondAttribute="trailing" id="fQy-uR-4ph"/>
+                                    <constraint firstItem="xLg-6O-6Zm" firstAttribute="leading" secondItem="Wv1-YX-fzw" secondAttribute="leading" id="nWN-eO-rD9"/>
+                                    <constraint firstItem="xLg-6O-6Zm" firstAttribute="top" secondItem="9T0-Wg-nhU" secondAttribute="bottom" id="sog-09-lQO"/>
+                                    <constraint firstAttribute="trailing" secondItem="gJl-pq-nBf" secondAttribute="trailing" constant="5" id="yN1-Ov-i4Z"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9T0-Wg-nhU" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="09Q-a6-3X7"/>
+                            <constraint firstItem="Wv1-YX-fzw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dx4-IR-WaF"/>
+                            <constraint firstItem="ifc-vs-eXA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J0J-59-zBT"/>
+                            <constraint firstItem="ifc-vs-eXA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tr0-eg-bOe"/>
+                            <constraint firstItem="9T0-Wg-nhU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.935" id="edi-7T-1fR"/>
+                            <constraint firstItem="Wv1-YX-fzw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rAY-Om-QeI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wv1-YX-fzw" secondAttribute="trailing" id="sHg-ed-qhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wv1-YX-fzw" secondAttribute="bottom" id="tJa-57-QbK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="browseButton" destination="ifc-vs-eXA" id="Ckt-QP-qjE"/>
+                        <outlet property="lineView" destination="xLg-6O-6Zm" id="fcg-c3-blA"/>
+                        <outlet property="messageView" destination="9T0-Wg-nhU" id="yPz-Fp-HpK"/>
+                        <outlet property="scrollView" destination="Wv1-YX-fzw" id="JMc-vL-7GL"/>
+                        <outlet property="sendButton" destination="gJl-pq-nBf" id="URs-lX-lvp"/>
+                        <outlet property="textField" destination="tjc-hb-9Mt" id="e90-Tj-fDF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+</document>
